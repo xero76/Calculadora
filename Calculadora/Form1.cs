@@ -1,4 +1,5 @@
 using Calculadora.Clases;
+using Microsoft.VisualBasic;
 
 namespace Calculadora
 {
@@ -12,22 +13,22 @@ namespace Calculadora
 
         private void brnSuma_Click(object sender, EventArgs e)
         {
-            Operaciones operaciones = new Operaciones();
+            if(ComprobarVariables() == true)
+            {
+                Operaciones operaciones = new Operaciones();
 
-            txtResultado.Text =  operaciones.Sumar( double.Parse(txtValorA.Text), double.Parse(txtValorB.Text)).ToString();
-
+                txtResultado.Text = operaciones.Sumar(double.Parse(txtValorA.Text), double.Parse(txtValorB.Text)).ToString();
+            }
         }
 
         private void btnResta_Click(object sender, EventArgs e)
         {
-            Operaciones operaciones = new Operaciones();
-            txtResultado.Text = operaciones.Restar(Double.Parse(txtValorA.Text), Double.Parse(txtValorB.Text)).ToString();
+           
         }
 
         private void btnMultiplicacion_Click(object sender, EventArgs e)
         {
-            Operaciones operaciones = new Operaciones();
-            txtResultado.Text = operaciones.Multiplicar(Double.Parse(txtValorA.Text), Double.Parse(txtValorB.Text)).ToString();
+            
 
         }
 
@@ -46,5 +47,43 @@ namespace Calculadora
         {
             //      Math.Pow(VariableB ,(1/VariableA ))  Restriccion: B > 0 
         }
+
+
+        public bool ComprobarVariables()
+        {
+            bool variablesOk = false;
+
+            if(double.TryParse(txtValorA.Text, out double num1 ))
+            {
+                if(double.TryParse(txtValorB.Text, out double num2))
+                {
+                    variablesOk = true;
+                }
+                else
+                {
+                    if (txtValorB.Text == "")
+                    {
+                        MessageBox.Show("La Variable B esta Vacia");
+                    }
+                    else
+                    {
+                        MessageBox.Show("La Variable B no es un numero");
+                    }
+                }
+            }
+            else
+            {
+                if (txtValorA.Text == "")
+                {
+                    MessageBox.Show("La Variable A esta Vacia");
+                }
+                else { 
+                MessageBox.Show("La Variable A no es un numero");
+                }
+            }
+            return variablesOk;
+        }
+
+
     }
 }
