@@ -23,7 +23,12 @@ namespace Calculadora
 
         private void btnResta_Click(object sender, EventArgs e)
         {
-           
+            if (ComprobarVariables() == true)
+            {
+                Operaciones operaciones = new Operaciones();
+
+                txtResultado.Text = operaciones.Restar(double.Parse(txtValorA.Text), double.Parse(txtValorB.Text)).ToString();
+            }
         }
 
         private void btnMultiplicacion_Click(object sender, EventArgs e)

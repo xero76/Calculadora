@@ -15,5 +15,11 @@ namespace Calculadora.Clases
             suma = ValorA + ValorB;
             return suma;
         }
+        public double Restar(Double ValorA, Double ValorB)
+        {
+            Double suma = 0;
+            suma = ValorA - ValorB;
+            return suma;
+        }
     }
 }
