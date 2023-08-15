@@ -33,13 +33,24 @@ namespace Calculadora
 
         private void btnMultiplicacion_Click(object sender, EventArgs e)
         {
-            
+            if (ComprobarVariables() == true)
+            {
+                Operaciones operaciones = new Operaciones();
+
+                txtResultado.Text = operaciones.Multiplicar(double.Parse(txtValorA.Text), double.Parse(txtValorB.Text)).ToString();
+            }
 
         }
 
         private void btnDivision_Click(object sender, EventArgs e)
         {
+            if (ComprobarVariables() == true)
+            {
+                Operaciones operaciones = new Operaciones();
 
+                txtResultado.Text = operaciones.Dividir(double.Parse(txtValorA.Text), double.Parse(txtValorB.Text)).ToString("N3");
+            }
+            // Restricciones: B > 0
 
         }
         private void btnExponente_Click(object sender, EventArgs e)
