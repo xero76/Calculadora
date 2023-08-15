@@ -20,11 +20,14 @@ namespace Calculadora
 
         private void btnResta_Click(object sender, EventArgs e)
         {
-
+            Operaciones operaciones = new Operaciones();
+            txtResultado.Text = operaciones.Restar(Double.Parse(txtValorA.Text), Double.Parse(txtValorB.Text)).ToString();
         }
 
         private void btnMultiplicacion_Click(object sender, EventArgs e)
         {
+            Operaciones operaciones = new Operaciones();
+            txtResultado.Text = operaciones.Multiplicar(Double.Parse(txtValorA.Text), Double.Parse(txtValorB.Text)).ToString();
 
         }
 
