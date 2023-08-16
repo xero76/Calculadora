@@ -41,24 +41,25 @@
             btnExponente = new Button();
             btnRaiz = new Button();
             btnExit = new Button();
+            btnReset = new Button();
             SuspendLayout();
             // 
             // txtValorA
             // 
-            txtValorA.Font = new Font("Digital-7", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtValorA.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtValorA.Location = new Point(23, 164);
             txtValorA.Margin = new Padding(3, 2, 3, 2);
             txtValorA.Name = "txtValorA";
-            txtValorA.Size = new Size(110, 28);
+            txtValorA.Size = new Size(110, 31);
             txtValorA.TabIndex = 0;
             // 
             // txtValorB
             // 
-            txtValorB.Font = new Font("Digital-7", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtValorB.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtValorB.Location = new Point(22, 237);
             txtValorB.Margin = new Padding(3, 2, 3, 2);
             txtValorB.Name = "txtValorB";
-            txtValorB.Size = new Size(110, 28);
+            txtValorB.Size = new Size(110, 31);
             txtValorB.TabIndex = 1;
             // 
             // label1
@@ -82,10 +83,10 @@
             // txtResultado
             // 
             txtResultado.Enabled = false;
-            txtResultado.Font = new Font("Digital-7", 35.9999962F, FontStyle.Regular, GraphicsUnit.Point);
+            txtResultado.Font = new Font("Microsoft Sans Serif", 35.9999962F, FontStyle.Regular, GraphicsUnit.Point);
             txtResultado.Location = new Point(24, 53);
             txtResultado.Name = "txtResultado";
-            txtResultado.Size = new Size(363, 55);
+            txtResultado.Size = new Size(363, 62);
             txtResultado.TabIndex = 4;
             // 
             // label3
@@ -167,11 +168,22 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(57, 354);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 23);
+            btnReset.TabIndex = 13;
+            btnReset.Text = "Reiniciar";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
             // Calculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(434, 389);
+            Controls.Add(btnReset);
             Controls.Add(btnExit);
             Controls.Add(btnRaiz);
             Controls.Add(btnExponente);
@@ -210,5 +222,6 @@
         private Button btnExponente;
         private Button btnRaiz;
         private Button btnExit;
+        private Button btnReset;
     }
 }

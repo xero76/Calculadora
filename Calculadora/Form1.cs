@@ -46,11 +46,18 @@ namespace Calculadora
         {
             if (ComprobarVariables() == true)
             {
-                Operaciones operaciones = new Operaciones();
+                if (txtValorB.Text == "0")
+                {
+                    MessageBox.Show("Las variable B no puede ser 0");
+                }
+                else
+                {
+                    Operaciones operaciones = new Operaciones();
 
-                txtResultado.Text = operaciones.Dividir(double.Parse(txtValorA.Text), double.Parse(txtValorB.Text)).ToString("N3");
+                    txtResultado.Text = operaciones.Dividir(double.Parse(txtValorA.Text), double.Parse(txtValorB.Text)).ToString("N3");
+                }
             }
-            // Restricciones: B > 0
+
 
         }
         private void btnExponente_Click(object sender, EventArgs e)
@@ -105,6 +112,13 @@ namespace Calculadora
         {
             //Termina la ejecución de la solucion
             this.Close();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtResultado.Text = " ";
+            txtValorA.Text = " ";
+            txtValorB.Text = " ";
         }
     }
 }
