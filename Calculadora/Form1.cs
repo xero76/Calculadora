@@ -13,7 +13,7 @@ namespace Calculadora
 
         private void brnSuma_Click(object sender, EventArgs e)
         {
-            if(ComprobarVariables() == true)
+            if (ComprobarVariables() == true)
             {
                 Operaciones operaciones = new Operaciones();
 
@@ -69,9 +69,9 @@ namespace Calculadora
         {
             bool variablesOk = false;
 
-            if(double.TryParse(txtValorA.Text, out double num1 ))
+            if (double.TryParse(txtValorA.Text, out double num1))
             {
-                if(double.TryParse(txtValorB.Text, out double num2))
+                if (double.TryParse(txtValorB.Text, out double num2))
                 {
                     variablesOk = true;
                 }
@@ -93,13 +93,18 @@ namespace Calculadora
                 {
                     MessageBox.Show("La Variable A esta Vacia");
                 }
-                else { 
-                MessageBox.Show("La Variable A no es un numero");
+                else
+                {
+                    MessageBox.Show("La Variable A no es un numero");
                 }
             }
             return variablesOk;
         }
 
-
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            //Termina la ejecución de la solucion
+            this.Close();
+        }
     }
 }
