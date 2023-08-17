@@ -35,5 +35,17 @@ namespace Calculadora.Clases
             division = ValorA / ValorB;
             return (division);
         }
+        public double Exponente(Double ValorA, Double ValorB)
+        {
+            Double Potencia = 0;
+            Potencia = Math.Pow(ValorA, ValorB);
+            return (Potencia);
+        }
+        public double RaizCuadrada(Double ValorA, Double ValorB)
+        {
+            Double Raiz = 0;
+            Raiz = Math.Pow(ValorA, (1 / ValorB));
+            return (Raiz);
+        }
     }
 }
