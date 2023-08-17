@@ -79,26 +79,27 @@ namespace Calculadora
 
             }
         }
-            private void btnRaiz_Click(object sender, EventArgs e)
+        private void btnRaiz_Click(object sender, EventArgs e)
         {
             //      Math.Pow(VariableB ,(1/VariableA ))  Restriccion: B > 0 
 
             if (ComprobarVariables() == true)
             {
                 Double RestriccionA = Double.Parse(txtValorA.Text);
-                Double RestriccionB= Double.Parse(txtValorB.Text);
-                if ( RestriccionA < 0)
+                Double RestriccionB = Double.Parse(txtValorB.Text);
+                if (RestriccionA < 0)
                 {
                     MessageBox.Show("La variable A no puede ser menor a 0");
-                } else if (0 == 1 )
+                }
+                else if (RestriccionB == 0)
                 {
-                    MessageBox.Show("La variable B no puede ser menor a 0");
-                }   
+                    MessageBox.Show("La variable B no puede ser igual a 0");
+                }
                 else
                 {
                     Operaciones operaciones = new Operaciones();
 
-                    txtResultado.Text = operaciones.RaizCuadrada(double.Parse(txtValorA.Text),double.Parse(txtValorB.Text)).ToString();
+                    txtResultado.Text = operaciones.RaizCuadrada(double.Parse(txtValorA.Text), double.Parse(txtValorB.Text)).ToString();
                 }
             }
 
