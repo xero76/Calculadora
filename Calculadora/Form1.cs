@@ -120,5 +120,6 @@ namespace Calculadora
             txtValorA.Text = " ";
             txtValorB.Text = " ";
         }
+
     }
 }

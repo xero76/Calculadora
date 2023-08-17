@@ -67,3 +67,4 @@ C:\Users\cdann\Documents\GitHub\Calculadora\Calculadora\obj\Debug\net6.0-windows
 C:\Users\cdann\Documents\GitHub\Calculadora\Calculadora\obj\Debug\net6.0-windows\Calculadora.pdb
 C:\Users\cdann\Documents\GitHub\Calculadora\Calculadora\obj\Debug\net6.0-windows\Calculadora.genruntimeconfig.cache
 C:\Users\cdann\Documents\GitHub\Calculadora\Calculadora\obj\Debug\net6.0-windows\ref\Calculadora.dll
+D:\codes\GetHub\Calculadora\Calculadora\obj\Debug\net6.0-windows\Calculadora.Properties.Resources.resources
